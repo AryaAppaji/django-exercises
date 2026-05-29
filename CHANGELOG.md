@@ -6,3 +6,7 @@
   - Django(The actual web framework)
   - Django Rest Framework(For writing APIs)
   - Ruff (For Formatting and Linting)
+
+## [0.2.0] - 2026/5/29
+
+- Updated [README.md](README.md)
