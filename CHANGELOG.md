@@ -34,3 +34,13 @@
 ### Fixed
 
 - Removed accidentally committed `.env` file
+
+## [0.4] - 2026-06-01
+
+## Added
+
+- External API calling using `httpx`.
+
+## Updated
+
+- Updated `README.md`

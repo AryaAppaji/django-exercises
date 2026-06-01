@@ -14,3 +14,4 @@ This repository contains different examples implemented with django. Designed to
 Documentation for each example in this project will be seperated into specific markdown files. Please find them indexed in a proper way.
 
 - [Environment Variables Setup](docs/1_ENVIRONMENT_VARIABLES_SETUP.md)
+- [Calling External APIs](docs/2_CALLING_EXTERNAL_APIS.md)
