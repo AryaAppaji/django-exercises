@@ -44,3 +44,13 @@
 ## Updated
 
 - Updated `README.md`
+
+## [0.5] - 2026-07-07
+
+## Added
+
+- Added email sending using django's built-in `send_mail()`
+
+## Updated
+
+- Updated Examples based on the project structure.

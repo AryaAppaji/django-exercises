@@ -23,4 +23,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("get-data/", views.get_data, name="get_data"),
     path("post-data/", views.post_data, name="post_data"),
+    path("send-email/", views.send_email_to_user, name="send_email_to_user"),
 ]

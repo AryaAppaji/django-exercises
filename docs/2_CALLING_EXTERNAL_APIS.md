@@ -62,7 +62,7 @@ Step-2: Create a Django app for working with external APIs.
 Run the following command:
 
 ```bash
-python manage.py startapp external_api
+python manage.py startapp firstapp
 ```
 
 After creating the app, register it inside `INSTALLED_APPS`.
@@ -70,7 +70,7 @@ After creating the app, register it inside `INSTALLED_APPS`.
 ```python
 INSTALLED_APPS = [
     ...
-    "external_api",
+    "firstapp",
 ]
 ```
 
@@ -162,7 +162,7 @@ After this, your project structure may look like this:
 
 ```text
 root_directory/
-|--external_api/
+|--firstapp/
 |  |--migrations/
 |  |--__init__.py
 |  |--admin.py
@@ -185,7 +185,7 @@ root_directory/
 Step-6: Run the server using:
 
 ```bash
-python manage.py runserver
+uv run manage.py runserver
 ```
 
 If the server starts successfully, your API integration is ready.
@@ -195,7 +195,7 @@ If the server starts successfully, your API integration is ready.
 Open:
 
 ```text
-http://127.0.0.1:8000/api/get-data/
+http://127.0.0.1:8000/get-data/
 ```
 
 This should return data fetched from the external API.
@@ -205,7 +205,7 @@ This should return data fetched from the external API.
 Call:
 
 ```text
-http://127.0.0.1:8000/api/post-data/
+http://127.0.0.1:8000/post-data/
 ```
 
 with request body:

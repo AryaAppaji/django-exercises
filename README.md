@@ -15,3 +15,4 @@ Documentation for each example in this project will be seperated into specific m
 
 - [Environment Variables Setup](docs/1_ENVIRONMENT_VARIABLES_SETUP.md)
 - [Calling External APIs](docs/2_CALLING_EXTERNAL_APIS.md)
+- [Sending Emails using Google SMTP](docs/3_SENDING_EMAILS.md)
