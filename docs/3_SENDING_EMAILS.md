@@ -1,5 +1,10 @@
 # Sending Emails in Django using Gmail SMTP
 
+> [!NOTE]
+> **Prerequisite:** This guide assumes you have already configured environment variables using `django-environ`.
+>
+> If you haven't, complete the **[Configuring Environment Variables in Django using django-environ](/docs/1_ENVIRONMENT_VARIABLES_SETUP.md)** exercise before continuing.
+
 ## What is SMTP?
 
 SMTP (Simple Mail Transfer Protocol) is the standard protocol used for sending emails over the internet.

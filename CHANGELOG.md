@@ -35,7 +35,7 @@
 
 - Removed accidentally committed `.env` file
 
-## [0.4] - 2026-06-01
+## [0.4.0] - 2026-06-01
 
 ## Added
 
@@ -45,7 +45,7 @@
 
 - Updated `README.md`
 
-## [0.5] - 2026-07-07
+## [0.5.0] - 2026-07-07
 
 ## Added
 
@@ -54,3 +54,9 @@
 ## Updated
 
 - Updated Examples based on the project structure.
+
+## [0.5.1] - 2026-07-07
+
+## Updated
+
+- Updated exercises with prerequisite instruction.
