@@ -36,8 +36,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "firstapp",
+    # Exteranal Package Apps.
     "rest_framework",
+    "drf_spectacular",
+    # Apps that are part of project.
+    "firstapp",
 ]
 
 MIDDLEWARE = [
@@ -73,10 +76,21 @@ WSGI_APPLICATION = "project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": env.str("DB_ENGINE"),
+        "HOST": env.str("DB_HOST"),
+        "PORT": env.int("DB_PORT"),
+        "NAME": env.str("DB_NAME"),
+        "USER": env.str("DB_USER"),
+        "PASSWORD": env.str("DB_PASSWORD"),
     }
 }
 
@@ -123,3 +137,14 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 DUMMY_API_URL = env("DUMMY_API_URL")
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "DJANGO EXERCISES",
+    "DESCRIPTION": "This repository contains different examples implemented with django. Designed to help aspirants who want to step into django.",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": True,
+}

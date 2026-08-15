@@ -18,9 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from firstapp import views
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/docs", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
+    path("api/schema", SpectacularAPIView.as_view(), name="schema"),
     path("get-data/", views.get_data, name="get_data"),
     path("post-data/", views.post_data, name="post_data"),
     path("send-email/", views.send_email_to_user, name="send_email_to_user"),

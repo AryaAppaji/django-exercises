@@ -3,7 +3,9 @@ from .base import *
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 SECRET_KEY = env.str("DJANGO_SECRET_KEY")
 
-EMAIL_BACKEND = env.str("EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend")
+EMAIL_BACKEND = env.str(
+    "EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
+)
 EMAIL_HOST = env.str("EMAIL_HOST")
 EMAIL_PORT = env.int("EMAIL_PORT")
 EMAIL_HOST_USER = env.str("EMAIL_HOST_USER")

@@ -60,3 +60,13 @@
 ## Updated
 
 - Updated exercises with prerequisite instruction.
+
+## [0.6.0] - 2026-08-15
+
+## Added
+
+- Added API DOCUMENTATION generation amd basic database connection.
+
+## Updated
+
+- Updated `README.md`
