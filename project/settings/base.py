@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
     # Apps that are part of project.
+    "coreapp",
     "firstapp",
 ]
 
@@ -124,6 +125,8 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+
+AUTH_USER_MODEL = "coreapp.CustomUser"
 
 
 # Static files (CSS, JavaScript, Images)

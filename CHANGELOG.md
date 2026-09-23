@@ -65,7 +65,17 @@
 
 ## Added
 
-- Added API DOCUMENTATION generation amd basic database connection.
+- Added API DOCUMENTATION generation and basic database connection.
+
+## Updated
+
+- Updated `README.md`
+
+## [0.7.0] - 2026-09-23
+
+## Added
+
+- Added Custom User Model creation.
 
 ## Updated
 

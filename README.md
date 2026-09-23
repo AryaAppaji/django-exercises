@@ -17,3 +17,4 @@ Documentation for each example in this project will be seperated into specific m
 - [Calling External APIs](docs/2_CALLING_EXTERNAL_APIS.md)
 - [Sending Emails using Google SMTP](docs/3_SENDING_EMAILS.md)
 - [API Documentation using Swagger](docs/4_API_DOCUMENTATION.md)
+- [Creating a Custom User Model](docs/5_CREATING_CUSTOM_USER_MODEL.md)
