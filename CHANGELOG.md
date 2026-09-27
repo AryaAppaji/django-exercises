@@ -80,3 +80,13 @@
 ## Updated
 
 - Updated `README.md`
+
+## [0.8.0] - 2026-09-27
+
+## Added
+
+- Added Custom Command creation.
+
+## Updated
+
+- Updated `README.md`
