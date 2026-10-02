@@ -151,6 +151,30 @@ paths:
                 type: object
                 additionalProperties: {}
           description: ''
+  /generate-barcode/:
+    get:
+      operationId: generate_barcode_retrieve
+      tags:
+      - generate-barcode
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /generate-qrcode/:
+    get:
+      operationId: generate_qrcode_retrieve
+      tags:
+      - generate-qrcode
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
   /get-data/:
     get:
       operationId: get_data_retrieve

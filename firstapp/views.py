@@ -1,3 +1,5 @@
+import io
+import base64
 import httpx
 from django.conf import settings
 from django.core.mail import send_mail
@@ -6,6 +8,9 @@ from drf_spectacular.utils import (
     extend_schema,
 )
 from rest_framework.decorators import api_view
+import barcode
+from barcode.writer import ImageWriter
+import qrcode
 
 
 api_base_url: str = settings.DUMMY_API_URL
@@ -69,5 +74,41 @@ def send_email_to_user(request) -> JsonResponse:
     try:
         send_mail(subject, message, from_email, recipient_list)
         return JsonResponse({"message": "Email sent successfully."})
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
+
+@api_view(["GET"])
+def generate_qrcode(request) -> JsonResponse:
+    data: str = "ABC786"
+
+    try:
+        buffer = io.BytesIO()
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data(data)
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="black", back_color="white")
+        img.save(buffer, format="PNG")
+        base64_image = base64.b64encode(buffer.getvalue()).decode("utf-8")
+        return JsonResponse({"qrcode": base64_image})
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
+
+@api_view(["GET"])
+def generate_barcode(request) -> JsonResponse:
+    data: str = "ABC786"
+
+    try:
+        buffer = io.BytesIO()
+        barcode_obj = barcode.codex.Code128(data, writer=ImageWriter())
+        barcode_obj.write(buffer)
+        base64_image = base64.b64encode(buffer.getvalue()).decode("utf-8")
+        return JsonResponse({"barcode": base64_image})
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)

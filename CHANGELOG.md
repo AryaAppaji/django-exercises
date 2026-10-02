@@ -90,3 +90,13 @@
 ## Updated
 
 - Updated `README.md`
+
+## [0.9.0] - 2026-10-02
+
+## Added
+
+- Added QR Code and Barcode generation.
+
+## Updated
+
+- Updated `README.md`

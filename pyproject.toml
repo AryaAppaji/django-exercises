@@ -1,6 +1,6 @@
 [project]
 name = "django-exercises"
-version = "0.8.0"
+version = "0.9.0"
 description = "This repository contains different examples implemented with django. Designed to help aspirants who want to step into django."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -10,6 +10,9 @@ dependencies = [
     "djangorestframework>=3.17.1",
     "drf-spectacular>=0.30.0",
     "httpx>=0.28.1",
+    "pillow>=12.3.0",
     "psycopg>=3.3.4",
+    "python-barcode>=0.16.1",
+    "qrcode>=8.2",
     "ruff>=0.15.15",
 ]
